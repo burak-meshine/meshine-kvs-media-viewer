@@ -100,42 +100,17 @@ $('.loader').hide();
 $('.main').show();
 console.log("Page loaded")
 
-
-
-// Show more text option 
-var showChar = 190;  // How many characters are shown by default
-var ellipsestext = "...";
-var moretext = "More Options";
-var lesstext = "Less Options";
-
-//Cut content based on showChar length
-if ($(".toggle-text").length) {
-    $(".toggle-text").each(function() {
-
-        var content = $(this).html();
-        console.log(content);
- 
-        if(content.length > showChar) {
- 
-            var contentExcert = content.substr(0, showChar);
-            var contentRest = content.substr(showChar, content.length - showChar);
-            var html = contentExcert + '<span class="toggle-text-ellipses">' + ellipsestext + ' </span> <span class="toggle-text-content"><span>' + contentRest + '</span><a href="javascript:;" class="toggle-text-link">' + moretext + '</a></span>';
- 
-            $(this).html(html);
-        }
+$(document).ready(function() {
+    $("#toggle").click(function() {
+      var elem = $("#toggle").text();
+      if (elem == "Read More") {
+        //Stuff to do when btn is in the read more state
+        $("#toggle").text("Read Less");
+        $("#text").slideDown();
+      } else {
+        //Stuff to do when btn is in the read less state
+        $("#toggle").text("Read More");
+        $("#text").slideUp();
+      }
     });
-}
-
-//Toggle content when click on read more link
-$(".toggle-text-link").click(function(){
-    if($(this).hasClass("less")) {
-        $(this).removeClass("less");
-        $(this).html(moretext);
-    } else {
-        $(this).addClass("less");
-        $(this).html(lesstext);
-    }
-    $(this).parent().prev().toggle();
-    $(this).prev().toggle();
-    return false;
-});
+  });

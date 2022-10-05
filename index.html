@@ -97,7 +97,8 @@
                                 <option>ON_DEMAND</option>
                             </select>
                         </div>
-                        <div class="toggle-text">
+                    <div>
+                        <span id="text">
                             <div class="form-group">
                                 <label>Start Timestamp</label>
                                 <input id="startTimestamp" type="datetime-local" class="form-control form-control-sm"/>
@@ -150,8 +151,12 @@
                                 <label>Expires (seconds)</label>
                                 <input id="expires" type="text" class="form-control form-control-sm"/>
                             </div>
+                        </span>
+                    </div>
 
-                        </div>
+                    <div class="btn-container">
+                    <button id="toggle">More Option </button>
+                    </div>
                         
                         <button id="start" type="submit" class="btn btn-primary">Start Playback</button>
                     </div>
