@@ -11,7 +11,7 @@
             .player {
                 width: 100%;
                 height: auto;
-                min-height: 400px;
+                min-height: 600px;
                 background-color: black;
                 outline: none;
             }
@@ -158,6 +158,7 @@
                     <button id="toggle">More Option </button>
                     </div>
                         
+                    <br>
                         <button id="start" type="submit" class="btn btn-primary">Start Playback</button>
                     </div>
                     <div class="col-md-8">
@@ -194,7 +195,6 @@
         <script>
             var DASH_PLAYERS = ['DASH.js', 'Shaka Player'];
             var HLS_PLAYERS = ['HLS.js', 'Shaka Player', 'VideoJS'];
-
             $('#start').click(function() {
                 var protocol = $('#protocol').val();
                 var streamName = $('#streamName').val();

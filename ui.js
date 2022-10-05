@@ -103,13 +103,13 @@ console.log("Page loaded")
 $(document).ready(function() {
     $("#toggle").click(function() {
       var elem = $("#toggle").text();
-      if (elem == "Read More") {
+      if (elem == "More Option") {
         //Stuff to do when btn is in the read more state
-        $("#toggle").text("Read Less");
+        $("#toggle").text("Less Option");
         $("#text").slideDown();
       } else {
         //Stuff to do when btn is in the read less state
-        $("#toggle").text("Read More");
+        $("#toggle").text("More Option");
         $("#text").slideUp();
       }
     });
