@@ -1,7 +1,6 @@
-## Amazon Kinesis Video Streams Media Viewer
+##  Meshine KVS Media Viewer
 
-Easily view HLS and MPEG-DASH output of Amazon Kinesis Video Streams
-
+Easily view HLS and MPEG-DASH output of Meshine Kinesis Video Streams
 * * *
 ## About
 This is a simple static webpage that simplifies testing and experiments with HLS and MPEG-DASH output from Amazon Kinesis Video Streams. This is based on the <a href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/how-hls.html">documentation</a>.
@@ -12,10 +11,10 @@ The easiest and recommended approach is to use the Github-hosted version of this
 ### Using the Github-hosted UI
 Because the project is a collection of static HTML and JavaScript, you can use the application without deploying the code into your own AWS account.
 
- To get started, go to the hosted [Kinesis Video Streams Media Viewer](https://aws-samples.github.io/amazon-kinesis-video-streams-media-viewer/).
+<!--  To get started, go to the hosted [Kinesis Video Streams Media Viewer](https://aws-samples.github.io/amazon-kinesis-video-streams-media-viewer/).
 
 <br />
-<a href="https://aws-samples.github.io/amazon-kinesis-video-streams-media-viewer/"><img border="0" src="sample_app.png"></a>
+<a href="https://aws-samples.github.io/amazon-kinesis-video-streams-media-viewer/"><img border="0" ></a> <!-- src="sample_app.png" --> 
 
 ## License Summary
 

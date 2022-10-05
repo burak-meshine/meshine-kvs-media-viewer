@@ -20,17 +20,17 @@
             }
         </style>
 
-        <title>Amazon Kinesis Video Streams Media Viewer</title>
+        <title>MESHINE KVS Media Viewer</title>
     </head>
     <body>
         <div class="container mb-3">
             <div class="row mt-3 mb-3">
                 <div class="col-md-12">
-                    <h1>Amazon Kinesis Video Streams Media Viewer</h1>
-                    Documentation:
+                    <h1>MESHINE KVS Media Viewer</h1>
+                    <!-- Documentation:
                     <a href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_reader_GetHLSStreamingSessionURL.html">HLS</a>
                     -
-                    <a href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_reader_GetDASHStreamingSessionURL.html">DASH</a>
+                    <a href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_reader_GetDASHStreamingSessionURL.html">DASH</a> -->
                 </div>
             </div>
             <div class="row loader"></div>
@@ -97,58 +97,62 @@
                                 <option>ON_DEMAND</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label>Start Timestamp</label>
-                            <input id="startTimestamp" type="datetime-local" class="form-control form-control-sm"/>
+                        <div class="toggle-text">
+                            <div class="form-group">
+                                <label>Start Timestamp</label>
+                                <input id="startTimestamp" type="datetime-local" class="form-control form-control-sm"/>
+                            </div>
+                            <div class="form-group">
+                                <label>End Timestamp</label>
+                                <input id="endTimestamp" type="datetime-local" class="form-control form-control-sm"/>
+                            </div>
+                            <div class="form-group">
+                                <label>Fragment Selector Type</label>
+                                <select id="fragmentSelectorType" class="form-control form-control-sm">
+                                    <option selected>SERVER_TIMESTAMP</option>
+                                    <option>PRODUCER_TIMESTAMP</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Container Format</label>
+                                <select id="containerFormat" class="form-control form-control-sm">
+                                    <option selected="">FRAGMENTED_MP4</option>
+                                    <option>MPEG_TS</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Discontinuity Mode</label>
+                                <select id="discontinuityMode" class="form-control form-control-sm">
+                                    <option selected>ALWAYS</option>
+                                    <option>NEVER</option>
+                                    <option>ON_DISCONTINUITY</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Display Fragment Timestamp</label>
+                                <select id="displayFragmentTimestamp" class="form-control form-control-sm">
+                                    <option>ALWAYS</option>
+                                    <option selected>NEVER</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Display Fragment Number</label>
+                                <select id="displayFragmentNumber" class="form-control form-control-sm">
+                                    <option>ALWAYS</option>
+                                    <option selected>NEVER</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Max Manifest/Playlist Fragment Results</label>
+                                <input id="maxResults" type="text" class="form-control form-control-sm"/>
+                            </div>
+                            <div class="form-group">
+                                <label>Expires (seconds)</label>
+                                <input id="expires" type="text" class="form-control form-control-sm"/>
+                            </div>
+
                         </div>
-                        <div class="form-group">
-                            <label>End Timestamp</label>
-                            <input id="endTimestamp" type="datetime-local" class="form-control form-control-sm"/>
-                        </div>
-                        <div class="form-group">
-                            <label>Fragment Selector Type</label>
-                            <select id="fragmentSelectorType" class="form-control form-control-sm">
-                                <option selected>SERVER_TIMESTAMP</option>
-                                <option>PRODUCER_TIMESTAMP</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Container Format</label>
-                            <select id="containerFormat" class="form-control form-control-sm">
-                                <option selected="">FRAGMENTED_MP4</option>
-                                <option>MPEG_TS</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Discontinuity Mode</label>
-                            <select id="discontinuityMode" class="form-control form-control-sm">
-                                <option selected>ALWAYS</option>
-                                <option>NEVER</option>
-                                <option>ON_DISCONTINUITY</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Display Fragment Timestamp</label>
-                            <select id="displayFragmentTimestamp" class="form-control form-control-sm">
-                                <option>ALWAYS</option>
-                                <option selected>NEVER</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Display Fragment Number</label>
-                            <select id="displayFragmentNumber" class="form-control form-control-sm">
-                                <option>ALWAYS</option>
-                                <option selected>NEVER</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Max Manifest/Playlist Fragment Results</label>
-                            <input id="maxResults" type="text" class="form-control form-control-sm"/>
-                        </div>
-                        <div class="form-group">
-                            <label>Expires (seconds)</label>
-                            <input id="expires" type="text" class="form-control form-control-sm"/>
-                        </div>
+                        
                         <button id="start" type="submit" class="btn btn-primary">Start Playback</button>
                     </div>
                     <div class="col-md-8">
@@ -324,8 +328,8 @@
             });
         </script>
         <script src="ui.js"></script>
-        <a href="https://github.com/aws-samples/amazon-kinesis-video-streams-media-viewer">
-            <img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub">
+        <a href="www.meshine.tech">
+            <img style="position: relative; top:0 ; left:90% ; border:0 ;" src="https://photo-example.s3.amazonaws.com/logo_1024.png" alt="">
         </a>
     </body>
 </html>
