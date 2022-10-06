@@ -11,10 +11,10 @@ The easiest and recommended approach is to use the Github-hosted version of this
 ### Using the Github-hosted UI
 Because the project is a collection of static HTML and JavaScript, you can use the application without deploying the code into your own AWS account.
 
-<!--  To get started, go to the hosted [Kinesis Video Streams Media Viewer](https://aws-samples.github.io/amazon-kinesis-video-streams-media-viewer/).
+To get started, go to the hosted [MESHINE KVS Media Viewer](https://burak-meshine.github.io/meshine-kvs-media-viewer/).
 
 <br />
-<a href="https://aws-samples.github.io/amazon-kinesis-video-streams-media-viewer/"><img border="0" ></a> <!-- src="sample_app.png" --> 
+<a href="https://burak-meshine.github.io/meshine-kvs-media-viewer/"><img border="0" src="kvs_screen.png"></a>
 
 ## License Summary
 
